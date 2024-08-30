@@ -6,7 +6,7 @@
 body{
     margin:0px;
     padding: 0px;
-    background-color: rgb(6, 2, 24);
+    background-color: rgb(4, 2, 17);
     color: aliceblue;
 }
 
@@ -15,6 +15,7 @@ header{
     display: flex;
     height:20vh;
     align-items: center;
+    background-color: rgba(3, 3, 46, 0.568);
     
 }
     .logocontainer{
@@ -23,8 +24,7 @@ header{
         width:45vw;
         }
         .logo{
-            position:relative;
-            right:100px;
+
         }
     .buttons{
         display: flex;
@@ -63,8 +63,9 @@ header{
 /* About Card---------------------------------------------------------------------- */
     .aboutcard{
         display: grid;
-        grid-template-columns: 45vw 45vw 5vw;
-        grid-template-rows:520px;
+        grid-template-columns: 45vw 50vw 2vw;
+        grid-template-rows:80vh;
+        background-color: rgba(3, 3, 46, 0.568);
 
     }
         .text{
@@ -109,41 +110,35 @@ header{
                     color:rgba(255, 255, 255);
                 }
     
+    .image{
+        display: flex;
+        justify-content: center;
+    }   
+        .profile{
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            height: 30vw;
+            margin-top: 5vh;
+        }
 
     .social{
         display: flex;
         flex-direction: column;
         color: red;
         font-weight: 300;
-        gap:20px;
+        gap:15px;
         font-size: small;
-        margin-top:100px;
-        
-        
+        margin-top:10vh;    
     }
         #follow{
             writing-mode: vertical-lr;
             width:25px;
-            margin-left:3px
+            margin-left:1px;
         }
-        #fb-logo{
-            width: 20px;
+        .slogo{
+            width: 18px;
             transition: width 0.5s;
         }
-        #ln-logo{
-            width: 20px;
-            transition: width 0.5s;
-        }
-        #tt-logo{
-            width: 20px;
-            transition: width 0.5s;
-        }
-        #fb-logo:hover{
-            width: 25px;
-        }
-        #ln-logo:hover{
-            width: 25px;
-        }
-        #tt-logo:hover{
-            width: 25px;
-        }
+            .slogo:hover{
+                width: 22px;
+            }
