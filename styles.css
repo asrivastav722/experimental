@@ -10,64 +10,64 @@ body{
     color: aliceblue;
 }
 
-/* Front section ----------------------------------------------------------------------------------------*/
-.front{
-    height:100vh;
-    background-color: rgba(26, 25, 25, 0.301);
+/* Header section ----------------------------------------------------------------------------------------*/
+header{
+    display: flex;
+    height:20vh;
+    align-items: center;
+    
 }
-    header{ 
-        padding-top: 3vh;
-        display:flex;
-        height: 15vh;
-        gap:5px;
-    }
-        .logo{ 
-            margin-right:20vw;
-            margin-left:10vw;
-            height:12vh;
+    .logocontainer{
+        display: flex;
+        justify-content: center;
+        width:45vw;
         }
+        .logo{
+            position:relative;
+            right:100px;
+        }
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        width:55vw;
+        font-size:small;
+        padding-right: 10vw;
+    }
         .btn{
-            min-width:70px;
-            width:90px;
-            height: 25px;
-            text-align: center;
-            padding-top: 7px;
-            margin-top: 15px;
-            border-radius: 5px;
+            padding-top: 15px;
             text-decoration: dashed;
-            font-size:12px;
-            color: rgba(240, 248, 255, 0.885);
-            font-weight: 400;
+            width: 80px;
+            color:aliceblue;
+            text-align: center;
+            transition:color 0.5s ;
+        }
+        .btn:hover{
+            color:rgba(240, 248, 255, 0.651);
         }
         .btn-adv{
-            min-width: 120px;
-            width:120px;
+            padding-top: 15px;
+            width:100px;
             height: 30px;
-            text-align: center;
-            padding-top: 11px;
-            margin-right: 10vw;
-            margin-left: 20px;
-            margin-top: 11px;
+            text-align:center;
             border-radius: 5px;
-            text-decoration: dashed;
-            font-size:12px;
-            font-weight: 400;
-            color: rgba(240, 248, 255, 0.764);
-            background-color: rgba(197, 19, 19, 0.654);
-            box-shadow: 0px 0px 10px rgba(165, 42, 42, 0.691);
-            transition:background-color 1ms;
-        }
-        .btn-adv:hover{
-            background-color: rgba(197, 19, 19, 0.917);
-            box-shadow: 0px 0px 10px rgba(165, 42, 42, 0.858) ;
-        }
-    .frontcontainer{
+            background-color: red;
+            text-decoration: dotted;
+            color: aliceblue;
+            margin-left:20px;
+            transition:background-color 0.5s;   
+            }
+            .btn-adv:hover{
+                background-color: rgba(255, 0, 0, 0.63);
+            }
+
+/* About Card---------------------------------------------------------------------- */
+    .aboutcard{
         display: grid;
-        grid-template-columns: 45vw 45vw 20vw;
-        grid-template-rows:85vh;
+        grid-template-columns: 45vw 45vw 5vw;
+        grid-template-rows:520px;
 
     }
-        .textholder{
+        .text{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -108,3 +108,42 @@ body{
                     line-height: 4vh;
                     color:rgba(255, 255, 255);
                 }
+    
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        color: red;
+        font-weight: 300;
+        gap:20px;
+        font-size: small;
+        margin-top:100px;
+        
+        
+    }
+        #follow{
+            writing-mode: vertical-lr;
+            width:25px;
+            margin-left:3px
+        }
+        #fb-logo{
+            width: 20px;
+            transition: width 0.5s;
+        }
+        #ln-logo{
+            width: 20px;
+            transition: width 0.5s;
+        }
+        #tt-logo{
+            width: 20px;
+            transition: width 0.5s;
+        }
+        #fb-logo:hover{
+            width: 25px;
+        }
+        #ln-logo:hover{
+            width: 25px;
+        }
+        #tt-logo:hover{
+            width: 25px;
+        }
