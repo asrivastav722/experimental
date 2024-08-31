@@ -6,30 +6,32 @@
 body{
     margin:0px;
     padding: 0px;
-    background-color: rgb(4, 2, 17);
+    
     color: aliceblue;
 }
 
 /* Header section ----------------------------------------------------------------------------------------*/
 header{
+    padding-top: 10px;
     display: flex;
-    height:20vh;
+    height:100px;
     align-items: center;
-    background-color: rgba(3, 3, 46, 0.568);
+    background-color: rgb(4, 2, 17);
     
 }
     .logocontainer{
         display: flex;
         justify-content: center;
-        width:45vw;
+        width:40vw;
         }
+        
         
     .buttons{
         display: flex;
         justify-content: flex-end;
         width:55vw;
         font-size:small;
-        padding-right: 10vw;
+        padding-right: 100px;
         gap:20px;
     }
         .btn{
@@ -40,33 +42,85 @@ header{
             text-align: center;
             transition:color 0.5s ;
             font-family:"Montserrat";
+            text-wrap:nowrap;
         }
         .btn:hover{
             color:rgba(240, 248, 255, 0.651);
         }
         .btn-adv{
             padding-top: 15px;
-            width:100px;
+            width:110px;
+            min-width:100px;
             height: 30px;
             text-align:center;
             border-radius: 5px;
             background-color: red;
-            text-decoration: dotted;
+            text-decoration: none;
             color: aliceblue;
             margin-left:20px;
             transition:background-color 0.5s;
-            font-family:"Montserrat";   
+            font-family:"Montserrat";
+            text-wrap:nowrap;   
             }
             .btn-adv:hover{
                 background-color: rgba(255, 0, 0, 0.63);
             }
-
+    .side-buttons{
+        padding-top: 50px;
+        position:fixed;
+        top:0;
+        right:-300px;
+        z-index: 999;
+        height: 100%;
+        width:300px;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(90px);
+        background-color: rgba(0, 0, 0, 0.575);
+        transition:0.2s ease-out;
+    }
+    .sbtn{
+        text-align: center;
+        padding-top: 15px;
+        text-decoration: none;
+        width: 300px;
+        height:40px;
+        color:aliceblue;
+        transition:color 0.5s ;
+        font-family:"Montserrat";
+        text-wrap: nowrap;
+    }
+    .sbtn:hover{
+        color:rgb(1, 13, 22);
+        background-color: azure;
+    }
+    .sbtn-adv{
+        margin-top: 40px;
+        padding-top: 15px;
+        width:150px;
+        text-align: center;
+        height: 30px;
+        border-radius: 5px;
+        background-color: red;
+        text-decoration: none;
+        color: aliceblue;
+        margin-left:80px;
+        transition:background-color 0.5s;
+        font-family:"Montserrat";
+        text-wrap:nowrap;   
+        }
+        .sbtn-adv:hover{
+            background-color: rgba(255, 0, 0, 0.63);
+        }
+        .menu{
+            display: none; 
+        }
 /* About Card---------------------------------------------------------------------- */
     .aboutcard{
         display: grid;
         grid-template-columns: 45vw 50vw 2vw;
         grid-template-rows:80vh;
-        background-color: rgba(3, 3, 46, 0.568);
+        background-color: rgb(4, 2, 17);
 
     }
         .text{
@@ -143,3 +197,87 @@ header{
             .slogo:hover{
                 width: 22px;
             }
+
+/*Abstract Section----------------------------------------------------------------------*/
+.abstract{
+    display:flex;
+    height:40vh;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    width:100%;
+    background-color: rgb(9, 2, 53);
+    box-shadow: 0px 0px 10px rgb(4, 2, 17) inset;
+}   
+    .abs{
+        height:30vh;
+        width:30vh;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Other Devices-----------------------------------------------------------------------------------------------------------------------------------*/
+/* for Tablets*---*/
+       @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        header{
+
+            background-color: blueviolet;
+        }
+        
+                
+    }
+
+/* For Mobile Phones Portrait or Landscape View */
+    @media screen and (max-device-width: 846px) {
+        header{
+
+            background-color: rgb(226, 43, 43);
+        }
+        .menu{
+            display:flex;
+            transition: display 2s;
+            margin-right: 20px;
+        
+        } 
+        .close{
+            margin-left: 250px;
+            margin-bottom: 40px;
+            
+        }
+        .btn{
+            display:none;
+        }
+        .btn-adv{
+            display:none;
+        }
+        
+
+        
+
+    }
