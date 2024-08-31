@@ -6,7 +6,7 @@
 body{
     margin:0px;
     padding: 0px;
-    
+    background-color: black;
     color: aliceblue;
 }
 
@@ -65,19 +65,31 @@ header{
             .btn-adv:hover{
                 background-color: rgba(255, 0, 0, 0.63);
             }
+    .sbh{
+        
+        height: 100%;
+        width: 100vw;
+        position: fixed;
+        right:-100vw;
+        top: 0;
+        display: flex;
+        align-items: right;
+        justify-content: flex-end;
+        transition:0.3s ease-out;
+    }
     .side-buttons{
         padding-top: 50px;
         position:fixed;
         top:0;
-        right:-300px;
         z-index: 999;
         height: 100%;
         width:300px;
         display: flex;
         flex-direction: column;
-        backdrop-filter: blur(90px);
+        backdrop-filter: blur(10px);
         background-color: rgba(0, 0, 0, 0.575);
-        transition:0.2s ease-out;
+        box-shadow: 0px 0px 10px rgb(211, 119, 119);
+        
     }
     .sbtn{
         text-align: center;
@@ -105,7 +117,7 @@ header{
         text-decoration: none;
         color: aliceblue;
         margin-left:80px;
-        transition:background-color 0.5s;
+        transition: background-color 0.5s;
         font-family:"Montserrat";
         text-wrap:nowrap;   
         }
@@ -121,13 +133,15 @@ header{
         grid-template-columns: 45vw 50vw 2vw;
         grid-template-rows:80vh;
         background-color: rgb(4, 2, 17);
+        height: 650px;
+        
 
     }
         .text{
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-bottom:25vh;
+            padding-bottom:20px;
         }
             .textarea{
                 display: flex;
@@ -168,6 +182,7 @@ header{
     .image{
         display: flex;
         justify-content: center;
+        height:400px;
     }   
         .profile{
             border-radius: 100%;
@@ -214,6 +229,11 @@ header{
         width:30vh;
     }
 
+    
+
+
+
+
 
 
 
@@ -245,20 +265,13 @@ header{
 /* Other Devices-----------------------------------------------------------------------------------------------------------------------------------*/
 /* for Tablets*---*/
        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        header{
-
-            background-color: blueviolet;
-        }
+        
         
                 
     }
 
 /* For Mobile Phones Portrait or Landscape View */
     @media screen and (max-device-width: 846px) {
-        header{
-
-            background-color: rgb(226, 43, 43);
-        }
         .menu{
             display:flex;
             transition: display 2s;
@@ -277,6 +290,115 @@ header{
             display:none;
         }
         
+        .logocontainer{
+            display: flex;
+            justify-content: center;
+            width:60vw;
+            }
+            .logo{
+                padding-left:50px;
+            }
+
+        .aboutcard{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(4, 2, 17);
+            width:100%;
+            height:fit-content;
+        }
+            .text{
+                width:100%;
+                height:500px;
+                padding-bottom: 0px;
+            }
+                .textarea{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1vh;
+                    width: 70vw;
+                    justify-content: center;
+                }
+                    .welcome{
+                            width: 120px;
+                            height: 25px;
+                            text-align: center;
+                            border-radius: 5px;
+                            background-color: rgba(63, 39, 7, 0.596);
+                            font-size:10pt;
+                            font-family: "Montserrat";
+                            color: rgba(255, 255, 255, 0.74);
+                    }
+                    .akash{
+                       
+                        font-size:35pt;
+                        font-weight:900;
+                        font-family:'Times New Roman', Times, serif;
+                        color: rgba(255, 255, 255);
+                    }
+                    .sde{
+                        font-size:12pt;
+                        font-family:"Montserrat";
+                        color: rgba(255, 255, 255);
+                        padding-bottom: 3vh;
+                    }
+                    .intro{
+                        font-size:9pt;
+                        line-height: 4vh;
+                        color:rgba(255, 255, 255);
+                    }
+        
+        .image{
+            display: flex;
+            justify-content: center;
+            height:200px;
+        }   
+            .profile{
+                border-radius: 100%;
+                box-shadow: 0px 0px 10px rgb(0, 0, 0);
+                height: 200px;
+                margin-top: 0vh;
+            }
+    
+        .social{
+            display:block;
+            text-align: center;
+            color: red;
+            font-weight: 300;
+            gap:0px;
+            font-size: small;
+            margin-top:50px;    
+        }
+            #follow{
+                
+                writing-mode: horizontal-tb;
+                width:100vw;
+                
+                
+            }
+            .slogo{
+                width: 20px;
+                padding:10px;
+                transition: width 0.5s;
+            }
+                .slogo:hover{
+                    width: 25px;
+                }
+    
+    /*Abstract Section----------------------------------------------------------------------*/
+    .abstract{
+        display:flex;
+        height:40vh;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        width:100%;
+        background-color: rgb(9, 2, 53);
+        box-shadow: 0px 0px 10px rgb(4, 2, 17) inset;
+    }   
+        .abs{
+            height:30vh;
+            width:30vh;
+        }
 
         
 
