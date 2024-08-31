@@ -32,6 +32,7 @@ header{
         width:55vw;
         font-size:small;
         padding-right: 10vw;
+        gap:20px;
     }
         .btn{
             padding-top: 15px;
@@ -40,6 +41,7 @@ header{
             color:aliceblue;
             text-align: center;
             transition:color 0.5s ;
+            font-family:"Montserrat";
         }
         .btn:hover{
             color:rgba(240, 248, 255, 0.651);
@@ -54,7 +56,8 @@ header{
             text-decoration: dotted;
             color: aliceblue;
             margin-left:20px;
-            transition:background-color 0.5s;   
+            transition:background-color 0.5s;
+            font-family:"Montserrat";   
             }
             .btn-adv:hover{
                 background-color: rgba(255, 0, 0, 0.63);
