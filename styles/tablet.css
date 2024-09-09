@@ -1,0 +1,230 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: "Roboto", sans-serif;   
+}
+body{
+    margin:0px;
+    padding: 40px;
+    background-color: black;
+    color: aliceblue;
+}
+
+/* Header section ----------------------------------------------------------------------------------------*/
+header{
+    padding-top: 10px;
+    display: flex;
+    height:100px;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    
+}
+    .logocontainer{
+        display: flex;
+        justify-content: center;
+        width:40vw;
+        }
+        
+        
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        width:55vw;
+        font-size:small;
+        padding-right: 100px;
+        gap:20px;
+    }
+        .btn{
+            padding-top: 15px;
+            text-decoration: dashed;
+            width: 80px;
+            color:aliceblue;
+            text-align: center;
+            transition:color 0.5s ;
+            font-family:"Montserrat";
+            text-wrap:nowrap;
+        }
+        .btn:hover{
+            color:rgba(240, 248, 255, 0.651);
+        }
+        .btn-adv{
+            padding-top: 15px;
+            width:110px;
+            min-width:100px;
+            height: 30px;
+            text-align:center;
+            border-radius: 5px;
+            background-color: red;
+            text-decoration: none;
+            color: aliceblue;
+            margin-left:20px;
+            transition:background-color 0.5s;
+            font-family:"Montserrat";
+            text-wrap:nowrap;   
+            }
+            .btn-adv:hover{
+                background-color: rgba(255, 0, 0, 0.63);
+            }
+    .sbh{
+        
+        height: 100%;
+        width: 100vw;
+        position: fixed;
+        right:-100vw;
+        top: 0;
+        display: flex;
+        align-items: right;
+        justify-content: flex-end;
+        transition:0.3s ease-out;
+    }
+    .side-buttons{
+        padding-top: 50px;
+        position:fixed;
+        top:0;
+        z-index: 999;
+        height: 100%;
+        width:300px;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.575);
+        box-shadow: 0px 0px 10px rgb(211, 119, 119);
+        
+    }
+    .sbtn{
+        text-align: center;
+        padding-top: 15px;
+        text-decoration: none;
+        width: 300px;
+        height:40px;
+        color:aliceblue;
+        transition:color 0.5s ;
+        font-family:"Montserrat";
+        text-wrap: nowrap;
+    }
+    .sbtn:hover{
+        color:rgb(1, 13, 22);
+        background-color: azure;
+    }
+    .sbtn-adv{
+        margin-top: 40px;
+        padding-top: 15px;
+        width:150px;
+        text-align: center;
+        height: 30px;
+        border-radius: 5px;
+        background-color: red;
+        text-decoration: none;
+        color: aliceblue;
+        margin-left:80px;
+        transition: background-color 0.5s;
+        font-family:"Montserrat";
+        text-wrap:nowrap;   
+        }
+        .sbtn-adv:hover{
+            background-color: rgba(255, 0, 0, 0.63);
+        }
+        .menu{
+            display: none; 
+        }
+/* About Card---------------------------------------------------------------------- */
+    .aboutcard{
+        display: grid;
+        grid-template-columns: 45vw 45vw 2vw;
+        grid-template-rows:500px;
+        background-color: rgb(0, 0, 0);       
+
+    }
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom:20px;
+        }
+            .textarea{
+                display: flex;
+                flex-direction: column;
+                width: 30vw;
+            }
+                .welcome{
+                        width: 120px;
+                        height: 25px;
+                        text-align: center;
+                        padding-top:1.5vh;
+                        border-radius: 5px;
+                        background-color: rgba(63, 39, 7, 0.596);
+                        font-size:10pt;
+                        font-family: "Montserrat";
+                        color: rgba(255, 255, 255, 0.74);
+                }
+                .akash{
+                   
+                    font-size:35pt;
+                    font-weight:900;
+                    font-family:'Times New Roman', Times, serif;
+                    color: rgba(255, 255, 255);
+                }
+                .sde{
+                    font-size:12pt;
+                    font-family:"Montserrat";
+                    color: rgba(255, 255, 255);
+                    padding-bottom: 3vh;
+                }
+                .intro{
+                    font-size:9pt;
+                    line-height: 4vh;
+                    color:rgba(255, 255, 255);
+                }
+    
+    .image{
+        display: flex;
+        justify-content: center;
+        height:0px;
+    }   
+        .profile{
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            height: 5vw;
+            margin-top: 5vh;
+        }
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        color:red;
+        font-weight: 300;
+        gap:15px;
+        font-size: small;
+        margin-top:5vh;    
+    }
+        #follow{
+            writing-mode: vertical-lr;
+            width:25px;
+            margin-left:1px;
+        }
+        .slogo{
+            width: 18px;
+            transition: width 0.5s;
+        }
+            .slogo:hover{
+                width: 22px;
+            }
+
+/*Abstract Section----------------------------------------------------------------------*/
+.abstract{
+    display:flex;
+    height:40vh;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    width:100%;
+    background-color: rgb(9, 2, 53);
+    box-shadow: 0px 0px 10px rgb(4, 2, 17) inset;
+}   
+    .abs{
+        height:30vh;
+        width:30vh;
+    }
+
+    
+
