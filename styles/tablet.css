@@ -5,7 +5,7 @@
 }
 body{
     margin:0px;
-    padding: 40px;
+    padding: 0px;
     background-color: black;
     color: aliceblue;
 }
@@ -131,7 +131,7 @@ header{
     .aboutcard{
         display: grid;
         grid-template-columns: 45vw 45vw 2vw;
-        grid-template-rows:500px;
+        grid-template-rows:450px;
         background-color: rgb(0, 0, 0);       
 
     }
@@ -139,7 +139,7 @@ header{
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-bottom:20px;
+            padding-bottom:100px;
         }
             .textarea{
                 display: flex;
@@ -222,9 +222,73 @@ header{
     box-shadow: 0px 0px 10px rgb(4, 2, 17) inset;
 }   
     .abs{
-        height:30vh;
+        font-family:"Montserrat";
+        height:25vh;
         width:30vh;
+        display: flex;
+        flex-direction: column;
+        border-color: rgba(165, 12, 12, 0.726);
+        border-style: dashed;
+        border-width: 1.5px;
+        border-radius: 0px 30px 0px 0px;
+        text-align: center;
+        justify-content: center;
+    }
+    .top{
+        font-family:"Montserrat";
+        font-size:40pt;
+        font-weight: 800;
     }
 
-    
+    .abs:hover{
+        cursor: pointer;
+        color: aqua;
+        font-family:"Montserrat";
+        height:25vh;
+        width:30vh;
+        display: flex;
+        flex-direction: column;
+        border-color: rgba(165, 12, 12);
+        border-style: groove;
+        border-width: 1.5px;
+        border-radius: 0px 30px 0px 0px;
+        text-align: center;
+        justify-content: center;
+    }
+/*Skills Section----------------------------------------------------------------------*/
+.skills{
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.skil{
+    margin:20px;
+    font-size:20pt;
+    text-align: center;
+    color: rgba(252, 6, 6, 0.651);
+    font-family:"Montserrat";
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+.skill{
+    box-shadow: 0px 0px 10px rgba(0, 89, 255, 0.452);
+    height:150px;
+    width:150px;
+    background-color: rgba(0, 89, 255, 0.116);
+    border-radius: 100px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    transition:box-shadow 0.2s;
+}
+.skill:hover{
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.89);
+    cursor: pointer;
+}
 
