@@ -1,3 +1,7 @@
+:root{
+    --bg:rgb(27, 26, 26);
+    --fg:rgb(44, 44, 44);    
+}
 *{
     padding:0px;
     margin:0px;
@@ -5,8 +9,7 @@
 }
 body{
     margin:0px;
-    padding: 40px;
-    background-color: black;
+    padding: 0px;
     color: aliceblue;
 }
 
@@ -16,7 +19,7 @@ header{
     display: flex;
     height:100px;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--bg);
     
 }
     .logocontainer{
@@ -132,7 +135,7 @@ header{
         display: grid;
         grid-template-columns: 45vw 45vw 2vw;
         grid-template-rows:500px;
-        background-color: rgb(0, 0, 0);       
+        background-color: var(--bg);       
 
     }
         .text{
@@ -218,8 +221,8 @@ header{
     align-items: center;
     gap:20px;
     width:100%;
-    background-color: rgb(9, 2, 53);
-    box-shadow: 0px 0px 10px rgb(4, 2, 17) inset;
+    background-color:var(--fg);
+    
 }   
     .abs{
         font-family:"Montserrat";
@@ -261,6 +264,7 @@ header{
     padding: 50px;
     display:flex;
     flex-direction: column;
+    background-color: var(--bg);
     gap:20px;
 }
 .skil{
@@ -277,10 +281,10 @@ header{
     gap:20px;
 }
 .skill{
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.048);
-    height:200px;
-    width:200px;
-    background-color: rgba(255, 255, 255, 0.048);
+    
+    height:170px;
+    width:180px;
+    background-color: var(--fg);
     border-radius: 7px;
     display: flex;
     flex-direction: column;
