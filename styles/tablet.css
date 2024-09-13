@@ -1,3 +1,7 @@
+:root{
+    --bg:rgb(27, 26, 26);
+    --fg:rgb(44, 44, 44);    
+}
 *{
     padding:0px;
     margin:0px;
@@ -6,7 +10,6 @@
 body{
     margin:0px;
     padding: 0px;
-    
     color: aliceblue;
 }
 
@@ -16,7 +19,7 @@ header{
     display: flex;
     height:100px;
     align-items: center;
-    
+    background-color: var(--bg);
     
 }
     .logocontainer{
@@ -131,8 +134,8 @@ header{
     .aboutcard{
         display: grid;
         grid-template-columns: 45vw 45vw 2vw;
-        grid-template-rows:450px;
-              
+        grid-template-rows:500px;
+        background-color: var(--bg);       
 
     }
         .text{
@@ -152,7 +155,7 @@ header{
                         text-align: center;
                         padding-top:1.5vh;
                         border-radius: 5px;
-                        background-color: rgba(63, 39, 7, 0.596);
+                        background-color: red;
                         font-size:10pt;
                         font-family: "Montserrat";
                         color: rgba(255, 255, 255, 0.74);
@@ -195,7 +198,7 @@ header{
         font-weight: 300;
         gap:15px;
         font-size: small;
-        margin-top:5vh;    
+        margin-top:20vh;    
     }
         #follow{
             writing-mode: vertical-lr;
@@ -218,7 +221,7 @@ header{
     align-items: center;
     gap:20px;
     width:100%;
-    
+    background-color:var(--bg);
     
 }   
     .abs{
@@ -255,31 +258,33 @@ header{
         text-align: center;
         justify-content: center;
     }
+
 /*Skills Section----------------------------------------------------------------------*/
 .skills{
     padding: 50px;
     display:flex;
     flex-direction: column;
-    gap:5px;
+    background-color: var(--bg);
+    gap:10px;
 }
 .skil{
     margin:20px;
-    font-size:2pt;
+    font-size:20pt;
     text-align: center;
-    color: rgba(252, 6, 6, 0.651);
+
     font-family:"Montserrat";
 }
 .row{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:5px;
+    gap:10px;
 }
 .skill{
     
-    height:140px;
-    width:160px;
-    
+    height:170px;
+    width:180px;
+    background-color: var(--fg);
     border-radius: 7px;
     display: flex;
     flex-direction: column;
@@ -297,3 +302,143 @@ header{
     font-family:"Montserrat";
 }
 
+/*Portfolio Section----------------------------------------------------------------------*/
+.Portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:40px;
+    padding-bottom: 40px;
+    height:fit-content;
+    width:100%;
+    
+    background-color: var(--bg);
+}
+.porthead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:fit-content;
+    gap:20px;
+    margin:10px;
+}
+.portoption{
+    display: flex;
+    gap:20px;
+}
+#porttext{
+
+    font-family:"montserrat";
+    font-size:20pt;
+    
+}
+#portpers{
+    padding: 10px;
+    font-family:"montserrat";
+    background-color: brown;
+    border-radius: 5px; 
+}
+#portpers:hover{
+    cursor: pointer;
+    padding: 10px;
+    background-color: brown;
+}
+#portprof{
+    padding: 10px;
+    font-family:"montserrat";
+    border-radius: 5px; 
+    
+}
+#portprof{
+    cursor: pointer;
+}
+
+#personal{
+    margin:20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+        gap:20px;
+        flex-wrap: wrap;
+}
+.pro{
+    width:350px;
+    height:200px;
+    background-color: var(--bg);
+    border-radius: 5px;
+    border:2px solid rgba(245, 222, 179, 0.219);
+
+}
+#professional{
+    margin:20px;
+    display:none;
+    gap:20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Experience Section----------------------------------------------------------------------*/
+.experience{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    background-color: var(--bg);
+    align-items: center;
+    justify-content: center;
+    font-family:"montserrat";
+    gap:1px;
+    height: fit-content;
+    text-align: center;
+}
+#exptext{
+    font-family:"montserrat";
+    font-size:20pt;
+    padding:40px;
+    text-align: center;
+    width:100%;
+}
+.exp{
+    display: flex;
+    flex-direction: column;
+    font-family:"montserrat";
+    gap:20px;
+    background-color: var(--fg);
+    padding: 20px;
+    border-radius:5px;
+    width:40vw;
+}
+.exhead{
+    display: flex;
+    justify-content: space-between;
+}
+#extitle{
+    text-align: center;
+    justify-content: center;
+    font-weight:500;
+    font-size: 20px;
+    font-family:"montserrat";
+}
+#exduration{
+    padding-top: 5px;
+    justify-content: center;
+    font-size: 15px;
+    font-family:"montserrat";
+}
+#exdesignation{
+    font-family:"montserrat";
+    font-size: 15px;
+}
+#exdescription{
+    list-style:none;
+    line-height: 30px;
+    font-size: 12px;
+}
+#breaker{
+    
+    height:80px;
+    border-style:dotted;
+    border-color: var(--fg);
+
+}
