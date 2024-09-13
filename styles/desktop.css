@@ -265,7 +265,7 @@ header{
     display:flex;
     flex-direction: column;
     background-color: var(--bg);
-    gap:20px;
+    gap:10px;
 }
 .skil{
     margin:20px;
@@ -278,7 +278,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap:10px;
 }
 .skill{
     
