@@ -15,7 +15,7 @@ body{
 
 /* Header section ----------------------------------------------------------------------------------------*/
 header{
-    padding-top: 10px;
+    padding-top: 40px;
     display: flex;
     height:100px;
     align-items: center;
@@ -25,17 +25,18 @@ header{
     .logocontainer{
         display: flex;
         justify-content: center;
-        width:40vw;
+        width:35vw;
         }
         
         
     .buttons{
         display: flex;
         justify-content: flex-end;
-        width:55vw;
+        width:65vw;
         font-size:small;
         padding-right: 100px;
         gap:20px;
+        padding-right: 130px;
     }
         .btn{
             padding-top: 15px;
@@ -89,9 +90,9 @@ header{
         width:300px;
         display: flex;
         flex-direction: column;
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.575);
-        box-shadow: 0px 0px 10px rgb(211, 119, 119);
+        
+        background-color: var(--fg);
+        box-shadow: 0px 0px 5px var(--bg);
         
     }
     .sbtn{
@@ -134,7 +135,7 @@ header{
     .aboutcard{
         display: grid;
         grid-template-columns: 45vw 45vw 2vw;
-        grid-template-rows:500px;
+        grid-template-rows:450px;
         background-color: var(--bg);       
 
     }
@@ -142,12 +143,13 @@ header{
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-bottom:100px;
+            
         }
             .textarea{
                 display: flex;
                 flex-direction: column;
                 width: 30vw;
+                gap:10px;
             }
                 .welcome{
                         width: 120px;
@@ -155,7 +157,7 @@ header{
                         text-align: center;
                         padding-top:1.5vh;
                         border-radius: 5px;
-                        background-color: red;
+                        background-color: rgba(255, 0, 0, 0.795);
                         font-size:10pt;
                         font-family: "Montserrat";
                         color: rgba(255, 255, 255, 0.74);
@@ -182,13 +184,13 @@ header{
     .image{
         display: flex;
         justify-content: center;
-        height:0px;
+        align-items: center;
     }   
         .profile{
             border-radius: 100%;
-            box-shadow: 0px 0px 10px rgb(0, 0, 0);
-            height: 5vw;
-            margin-top: 5vh;
+            box-shadow: 0px 0px 20px rgba(243, 219, 1, 0.308);
+            height: 300px;
+            
         }
 
     .social{
@@ -349,6 +351,8 @@ header{
     border-radius: 5px; 
     background-color: var(--bg);
 }
+
+
 #portprof{
     cursor: pointer;
 }
@@ -358,19 +362,23 @@ header{
     display:flex;
         gap:20px;
 }
-.pro{
-    width:350px;
-    height:200px;
+.pro{    
     background-color: var(--bg);
     border-radius: 5px;
     border:2px solid rgba(245, 222, 179, 0.219);
 
+}
+.provid{
+    width:350px;
+    height:200px;
 }
 #professional{
     margin:20px;
     display:none;
     gap:20px;
 }
+
+
 
 /*Experience Section----------------------------------------------------------------------*/
 .experience{
@@ -388,7 +396,8 @@ header{
 #exptext{
     font-family:"montserrat";
     font-size:20pt;
-    padding:40px;
+    padding-bottom:50px;
+    
     text-align: center;
     width:100%;
 }

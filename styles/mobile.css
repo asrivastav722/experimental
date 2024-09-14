@@ -281,6 +281,10 @@ body{
     border:2px solid rgba(245, 222, 179, 0.219);
 
 }
+.provid{
+    width:80vw;
+    height:200px;
+}
 #professional{
     margin:20px;
     display:none;
