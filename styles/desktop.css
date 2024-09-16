@@ -458,7 +458,7 @@ header{
         min-width: 80vw;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 20px;
+        padding: 10px;
         background-color: var(--bg);
         border-radius: 5px;
         gap:10px;
@@ -539,4 +539,92 @@ header{
             cursor: pointer;
 
         }
-            
+/*Contact Me*/
+.contactme{
+    display: flex;
+    background-color: var(--bg);
+}   
+    .col1{
+        width: 45%;
+        padding:100px;
+        padding-right: 0px;
+        
+    }
+        .cus{
+            font-family: "montserrat";
+            font-size:25pt;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+        .ct{
+            font-family: "montserrat";
+            font-size: 10pt;
+            line-height: 30px;
+        }
+        .cont{
+            padding-top: 50px;
+            display: flex;
+            gap:10px;
+        }
+            .cimg{
+                padding:5px ;
+            }
+            .ctexthold{
+            }
+                .ctext{
+                    font-size: medium;
+                    font-family: "montserrat";
+                    font-weight: 200;
+                }
+                .ccont{
+                    font-size: large;
+                    font-family: "montserrat";
+                    
+                }
+
+    .col2{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        padding: 100px;
+        padding-left: 0px;
+    }
+        .feed{
+            display: flex;
+            flex-wrap: wrap;
+            gap:15px;
+
+        }
+        textarea ,input{
+            width: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.356);
+            background-color: var(--bg);
+            border-radius: 5px;
+            padding: 20px;
+            font-family: "montserrat";
+        }
+        textarea{
+            height: 100px;
+        }
+        .sub{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            height: 50px;
+            width:130px;
+            border-radius:3px;
+            border: none;
+            font-family: "montserrat";
+            transition: all 0.2s;
+
+        }
+        .sub:hover{
+            cursor: pointer;
+            background-color: rgba(255, 0, 0, 0.295);
+        }
+
+        
+
+        

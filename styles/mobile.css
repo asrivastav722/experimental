@@ -84,8 +84,41 @@
         width:60vw;
     }
 
-
+.contactme{
+    flex-wrap: wrap;
+}
+    .col1{
+        width: 100%;
+        padding: 20px;
+        padding-right: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+        .cont{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 15px;
+        }
+        .col2{
+            width: 100%;
+            padding:20px;
+            padding-left: 20px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .feed{
+            justify-content: center;
+            align-items: center;
+        }
+            textarea ,input{
+                width:250px;
+                
+            }
     
+
              
     
                 
