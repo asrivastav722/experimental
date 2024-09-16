@@ -543,6 +543,7 @@ header{
 .contactme{
     display: flex;
     background-color: var(--bg);
+    gap:50px;
 }   
     .col1{
         width: 45%;
@@ -552,7 +553,7 @@ header{
     }
         .cus{
             font-family: "montserrat";
-            font-size:25pt;
+            font-size:20pt;
             font-weight: 400;
             padding-bottom: 20px;
         }
@@ -594,6 +595,8 @@ header{
             display: flex;
             flex-wrap: wrap;
             gap:15px;
+            position: relative;
+            bottom: 20px;
 
         }
         textarea ,input{
