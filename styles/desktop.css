@@ -439,63 +439,66 @@ header{
 .education{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 20px;
     gap:20px;
     background-color: var(--bg);
-    padding-top:40px;
+    
 }
     .educationtext{
         font-family:"montserrat";
         font-size:20pt;
-        margin-bottom:50px;
+        padding: 20px;
         text-align: center;
     }
     .eduholder{
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between; 
+        min-width: 80vw;
+        flex-wrap: wrap;
         justify-content: center;
-        height: fit-content;
-        width: fit-content;
         padding: 20px;
-        background-color: var(--fg);
+        background-color: var(--bg);
         border-radius: 5px;
         gap:10px;
     }
-    .edu{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        width:300px;
-        height: 150px;
-        background-color: var(--bg);
-        padding: 20px;
-        gap:20px;
-        border-radius: 5px;
-        box-shadow:0px 0px 10px rgba(0, 0, 0, 0.178);
-        font-family:"montserrat";
-    }
-        .eduln1{
+        .edu{
             display: flex;
-            justify-content: space-between;
-            
+            flex-wrap:wrap;
+            justify-content: space-around;
+            flex-direction: column;
+            width:80vw;
+            background-color: var(--fg);
+            padding: 20px;
+            gap:10px;
+            border-radius: 5px;
+            box-shadow:0px 0px 10px rgba(0, 0, 0, 0.178);
+            font-family:"montserrat";
         }
-            .edul{
-                font-family:"montserrat";
-                font-size: 12pt;
-                font-weight: 400;
+            .eduln1{
+                display: flex;
+                justify-content: space-between;
+                
             }
-        .eduln2{
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-            .edul2{
-                font-family:"montserrat";
-                font-size: 12pt;
-                font-weight: 200;
+                .edul{
+                    font-family:"montserrat";
+                    font-size: 12pt;
+                    font-weight: 400;
+                    width: fit-content;
+                    height: fit-content;
+                
+                }
+            .eduln2{
+                display: flex;
+                justify-content: space-between;
+                gap:10px;
             }
+                .edul2{
+                    font-family:"montserrat";
+                    font-size: 10pt;
+                    font-weight: 200;
+                    width: fit-content;
+                    height: fit-content;
+                }
             
