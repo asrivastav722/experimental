@@ -501,4 +501,42 @@ header{
                     width: fit-content;
                     height: fit-content;
                 }
+
+
+
+.coursework{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+    .courseholder{
+        padding-top: 30px;
+        display: flex;
+        width:80vw;
+        flex-wrap: wrap;
+        word-spacing: 20%;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        list-style: none;
+    }
+        .ctit{
+            font-size: small;
+            font-family:"montserrat";
+            background-color: var(--fg);
+            padding:10px ;
+            border-radius: 5px ;
+            border: 1px solid var(--fg);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.301);
+        }
+        .ctit:hover{
+            border:1px solid rgba(255, 255, 255, 0.281);
+            cursor: pointer;
+
+        }
             
