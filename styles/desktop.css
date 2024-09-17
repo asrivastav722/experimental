@@ -3,6 +3,9 @@
     --bg:rgb(27, 26, 26);
     --fg:rgb(44, 44, 44);    
 }
+html{
+    scroll-behavior:smooth;
+}
 *{
     padding:0px;
     margin:0px;
@@ -570,8 +573,7 @@ header{
             .cimg{
                 padding:5px ;
             }
-            .ctexthold{
-            }
+            
                 .ctext{
                     font-size: medium;
                     font-family: "montserrat";
