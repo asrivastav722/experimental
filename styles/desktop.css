@@ -607,6 +607,8 @@ header {
 
 .ctit {
     font-size: small;
+    justify-content: center;
+    align-items: center;
     font-family: "montserrat";
     background-color: var(--fg);
     padding: 10px;
