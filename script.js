@@ -24,4 +24,13 @@ function showProf(){
     per.style.display="none";
 }
 
+/*function changeclr(id){
+    const classes=document.getElementsByClassName("btn");
+    for( let i=0;i<classes.length;i++){
+        document.getElementsByClassName("btn")[i].style.backgroundColor="rgb(27, 26, 26)";
+    } 
+    document.querySelector(`${id}`).style.backgroundColor="brown";
+        
+}*/
+
 

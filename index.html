@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/desktop.css">
-    <link href="styles/tablet.css" rel="stylesheet" media="screen and (min-device-width: 768px) and (max-device-width: 1024px)" />
+    <link href="styles/tablet.css" rel="stylesheet"
+        media="screen and (min-device-width: 768px) and (max-device-width: 1024px)" />
     <link href="styles/mobile.css" rel="stylesheet" media="screen and (max-device-width: 846px)" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Personal Page</title>
 </head>
+
 <body>
 
-<!--Header Section--------------------------------------------------------->
-    <header >
+    <!--Header Section----------------------------------------------------------------------------------------------------------------->
+    <header>
         <div class="logocontainer">
             <img height="70px" class="logo" src="assets/pngegg.png" alt="">
         </div>
         <div class="buttons">
-            <a class="btn" href="#one">Portfolio</a>
-            <a class="btn" href="#two">Skillsets</a>
-            <a class="btn" href="#three">Experience</a>
-            <a class="btn" href="#four">Education</a>
-            <a class="btn" href="#five">Contact me</a>
+            <a class="btn" id="po" href="#one" onclick="changeclr('#po')">Portfolio</a>
+            <a class="btn" id="sk" href="#two" onclick="changeclr('#sk')">Skillsets</a>
+            <a class="btn" id="ex" href="#three" onclick="changeclr('#ex')">Experience</a>
+            <a class="btn" id="ed" href="#four" onclick="changeclr('#ed')">Education</a>
+            <a class="btn" id="cm" href="#five" onclick="changeclr('#cm')">Contact me</a>
             <a class="btn-adv" href="">Download CV</a>
-            
+
         </div>
-        <div onclick="showSidebar()"><svg class="menu" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></div>
-        <div class="sbh" onclick="hideSidebar()">    
+        <div onclick="showSidebar()"><svg class="menu" xmlns="http://www.w3.org/2000/svg" height="32"
+                viewBox="0 -960 960 960" width="32" fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></div>
+        <div class="sbh" onclick="hideSidebar()">
             <div class="side-buttons">
-                <div onclick="hideSidebar()"><svg class="close" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></div>
-                <a class="sbtn" href="#one">Portfolio</a>
-                <a class="sbtn" href="#two">Skillsets</a>
-                <a class="sbtn" href="#three">Experience</a>
-                <a class="sbtn" href="#four">Education</a>
-                <a class="sbtn" href="#five">Contact me</a>
-                <a class="sbtn-adv" href="">Download CV</a>
+                <div onclick="hideSidebar()"><svg class="close" xmlns="http://www.w3.org/2000/svg" height="32"
+                        viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></div>
+                    <a class="sbtn" id="po" href="#one" onclick="changeclr('#po')">Portfolio</a>
+                    <a class="sbtn" id="sk" href="#two" onclick="changeclr('#sk')">Skillsets</a>
+                    <a class="sbtn" id="ex" href="#three" onclick="changeclr('#ex')">Experience</a>
+                    <a class="sbtn" id="ed" href="#four" onclick="changeclr('#ed')">Education</a>
+                    <a class="sbtn" id="cm" href="#five" onclick="changeclr('#cm')">Contact me</a>
+                    <a class="sbtn-adv" href="">Download CV</a>
             </div>
         </div>
-        
-        
-    </header>
-        
 
-<!--About Card-------------------------------------------------------->
+
+    </header>
+
+
+    <!--About Card------------------------------------------------------------------------------------------------------------------------------->
     <section class="aboutcard">
         <div class="text">
             <div class="textarea">
                 <p class="welcome">Welcome! I'M</p>
                 <p class="akash">Akash Raj</p>
                 <p class="sde">Software Engineer</p>
-                <p class="intro">Innovative, task-driven professional with 3+ years of experience in web and Application developement across diverse areas. Proficient in developing databases, creating user interfaces, writing and testing codes, troubleshooting simple/complex issues, and implementing new features based on user feedback </p>
+                <p class="intro">Innovative, task-driven professional with 3+ years of experience in web and Application
+                    developement across diverse areas. Proficient in developing databases, creating user interfaces,
+                    writing and testing codes, troubleshooting simple/complex issues, and implementing new features
+                    based on user feedback </p>
             </div>
         </div>
         <div class="image">
@@ -62,148 +78,198 @@
         </div>
         <div class="social">
             <p id="follow">FOLLOW ME ON </p>
-            <a href=""><img class="slogo"  src="assets/fb.png" alt=""></a>
-            <a href=""><img class="slogo"  src="assets/ln.png" alt=""></a>
-            <a href=""><img class="slogo"  src="assets/tt.png" alt=""></a>                    
+            <a href=""><img class="slogo" src="assets/fb.png" alt=""></a>
+            <a href=""><img class="slogo" src="assets/ln.png" alt=""></a>
+            <a href=""><img class="slogo" src="assets/tt.png" alt=""></a>
         </div>
     </section>
 
-<!--Abstract-------------------------------------------------------->
+    <!--Abstract-------------------------------------------------------------------------------------------------------------------------------->
     <section class="abstract">
-            <div class="abs"><p class="top">02</p>Awards</div>
-            <div class="abs"><p class="top">10+</p>Clients</div>
-            <div class="abs"><p class="top">3+</p>Years Experience</div>
-            <div class="abs"><p class="top">20+</p>Projects</div>
-            
-            
+        <div class="abs">
+            <p class="top">02</p>Awards
+        </div>
+        <div class="abs">
+            <p class="top">10+</p>Clients
+        </div>
+        <div class="abs">
+            <p class="top">3+</p>Years Experience
+        </div>
+        <div class="abs">
+            <p class="top">20+</p>Projects
+        </div>
+
+
     </section>
-<!--Skillsets-------------------------------------------------------->
-<section class="skills" id="two">
-    <p class="skil">Skills</p>
-            <div class="row">
-                <div class="skill"><img height="70px" src="assets/html.png" alt=""><br><p class="skilltext">HTML</p></div>
-                <div class="skill"><img height="70px" src="assets/css.png" alt=""><br><p class="skilltext">CSS</p></div>
-                <div class="skill"><img height="70px" src="assets/js.png" alt=""><br><p class="skilltext">JavaScript</p></div>
+    <!--Skillsets--------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="skills" id="two">
+        <p class="skil">Skills</p>
+        <div class="skillholder">
+        <div class="row">
+            <div class="skill"><img height="70px" src="assets/html.png" alt=""><br>
+                <p class="skilltext">HTML</p>
             </div>
-            <div class="row">
-                <div class="skill"><img height="70px" src="assets/java.png" alt=""><br><p class="skilltext">Java</p></div>
-                <div class="skill"><img height="70px" src="assets/c.png" alt=""><br><p class="skilltext">C</p></div>
-                <div class="skill"><img height="70px" src="assets/cpp.png" alt=""><br><p class="skilltext">C++</p></div>
-                <div class="skill"><img height="70px" src="assets/py.png" alt=""><br><p class="skilltext">Python</p></div>
+            <div class="skill"><img height="70px" src="assets/css.png" alt=""><br>
+                <p class="skilltext">CSS</p>
             </div>
-            <div class="row">
-                <div class="skill"><img height="70px" src="assets/git.png" alt=""><br><p class="skilltext">Git/Github</p></div>
-                <div class="skill"><img height="70px" src="assets/node.png" alt=""><br><p class="skilltext">Node.js</p></div>
-                <div class="skill"><img height="70px" src="assets/ex.png" alt=""><br><p class="skilltext">Express.js</p></div>
+            <div class="skill"><img height="70px" src="assets/js.png" alt=""><br>
+                <p class="skilltext">JavaScript</p>
             </div>
-</section>
-<!--Portfolio-------------------------------------------------------->
-<section class="Portfolio" id="one">
-
-    <div class="porthead">
-        <div id="porttext">Portfolio</div>
-        <div class="portoption">
-            <div id="portpers" onclick="showPers()">Professional</div>
-            <div id="portprof" onclick="showProf()">Personal</div>
+        </div>
+        <div class="row">
+            <div class="skill"><img height="70px" src="assets/java.png" alt=""><br>
+                <p class="skilltext">Java</p>
+            </div>
+            <div class="skill"><img height="70px" src="assets/c.png" alt=""><br>
+                <p class="skilltext">C</p>
+            </div>
+            <div class="skill"><img height="70px" src="assets/cpp.png" alt=""><br>
+                <p class="skilltext">C++</p>
+            </div>
+            <div class="skill"><img height="70px" src="assets/py.png" alt=""><br>
+                <p class="skilltext">Python</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="skill"><img height="70px" src="assets/git.png" alt=""><br>
+                <p class="skilltext">Git/Github</p>
+            </div>
+            <div class="skill"><img height="70px" src="assets/node.png" alt=""><br>
+                <p class="skilltext">Node.js</p>
+            </div>
+            <div class="skill"><img height="70px" src="assets/ex.png" alt=""><br>
+                <p class="skilltext">Express.js</p>
+            </div>
         </div>
     </div>
-    <div id="personal" >
-        <a href="https://github.com/asrivastav722/Blog-page"><div class="pro"> <img class="provid" src="assets/blog.JPG"></div></a>
-        <a href="https://github.com/asrivastav722/Personal-Site"><div class="pro"><img class="provid" src="assets/personal.JPG"></div></a>
-        <a href="https://github.com/asrivastav722/Band-Name-Generator"><div class="pro"><img class="provid" src="assets/band.JPG"></div></a>
-    </div>
-    <div id="professional" >
-        <a href="https://asrivastav722.github.io/The-Dicee-Game/"><div class="pro"><img class="provid" src="assets/dice.JPG"></div></a>
-        <a href="https://asrivastav722.github.io/Drum-Kit/"><div class="pro"><img class="provid" src="assets/drum.JPG"></div></a>
-        <a href="https://asrivastav722.github.io/Simon-Game/"><div class="pro"><img class="provid" src="assets/simon.JPG"></div></a>
-    </div>      
-</section>
+    </section>
+    <!--Portfolio------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="Portfolio" id="one">
 
-<!--Experience-------------------------------------------------------------------------------------------------------------------------------------------->
-<section class="experience" id="three">
-    <div id="exptext" >Experience</div>
-    <div class="exp">
-        <div class="exhead"><p id="extitle">CodeSoft</p> <p id="exduration"> Aug 2023 - Sept 2023</p></div>
-        <p id="exdesignation" >Web Developer Intern</p>
-        <ul id="exdescription">
-            <li>Collaborated on Frontend Development projects.</li>
-            <li>Gained Hands-on experience in Frontend Development and problem-solving during internship</li>  
-            <li>Contributed in the development of multiple Ecommerce Websites, optimising it with HTML, CSS, JavaScript & Bootstrap.</li>
+        <div class="porthead">
+            <div id="porttext">Portfolio</div>
+            <div class="portoption">
+                <div id="portpers" onclick="showPers()">Professional</div>
+                <div id="portprof" onclick="showProf()">Personal</div>
+            </div>
+        </div>
+        <div id="personal">
+            <a href="https://github.com/asrivastav722/Blog-page">
+                <div class="pro"> <img class="provid" src="assets/blog.JPG"></div>
+            </a>
+            <a href="https://github.com/asrivastav722/Personal-Site">
+                <div class="pro"><img class="provid" src="assets/personal.JPG"></div>
+            </a>
+            <a href="https://github.com/asrivastav722/Band-Name-Generator">
+                <div class="pro"><img class="provid" src="assets/band.JPG"></div>
+            </a>
+        </div>
+        <div id="professional">
+            <a href="https://asrivastav722.github.io/The-Dicee-Game/">
+                <div class="pro"><img class="provid" src="assets/dice.JPG"></div>
+            </a>
+            <a href="https://asrivastav722.github.io/Drum-Kit/">
+                <div class="pro"><img class="provid" src="assets/drum.JPG"></div>
+            </a>
+            <a href="https://asrivastav722.github.io/Simon-Game/">
+                <div class="pro"><img class="provid" src="assets/simon.JPG"></div>
+            </a>
+        </div>
+    </section>
+
+    <!--Experience-------------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="experience" id="three">
+        <div id="exptext">Experience</div>
+        <div class="exp">
+            <div class="exhead">
+                <p id="extitle">CodeSoft</p>
+                <p id="exduration"> Aug 2023 - Sept 2023</p>
+            </div>
+            <p id="exdesignation">Web Developer Intern</p>
+            <ul id="exdescription">
+                <li>Collaborated on Frontend Development projects.</li>
+                <li>Gained Hands-on experience in Frontend Development and problem-solving during internship</li>
+                <li>Contributed in the development of multiple Ecommerce Websites, optimising it with HTML, CSS,
+                    JavaScript & Bootstrap.</li>
+            </ul>
+        </div>
+        <hr id="breaker">
+        <div class="exp">
+            <div class="exhead">
+                <p id="extitle">NullClasses</p>
+                <p id="exduration">Sept 2023 - Oct2023</p>
+            </div>
+            <p id="exdesignation">Android Developer Intern</p>
+            <ul id="exdescription">
+                <li>Contributed to the creation of a messenger app which is similar to Whatsapp.</li>
+                <li>Work alongside my teammates to upgrade messaging features.</li>
+                <li>Focused on user interface design .</li>
+            </ul>
+        </div>
+    </section>
+    <!--Education-------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <section class="education" id="four">
+        <div class="educationtext">Education</div>
+        <div class="eduholder">
+
+            <div class="edu">
+                <div class="eduln1">
+                    <p class="edul">Bachelor of Technology -Computer Science and Engineering</p>
+                    <p class="edul">83.4</p>
+                </div>
+                <div class="eduln2">
+                    <p class="edul2">Babu Banarasi Das University, Lucknow</p>
+                    <p class="edul2">2020-2024</p>
+                </div>
+            </div>
+
+            <div class="edu">
+                <div class="eduln1">
+                    <p class="edul">Intermediate</p>
+                    <p class="edul">60%</p>
+                </div>
+                <div class="eduln2">
+                    <p class="edul2">UMV College, Gonda- UP Board </p>
+                    <p class="edul2">2019</p>
+                </div>
+            </div>
+            <div class="edu">
+                <div class="eduln1">
+                    <p class="edul">High School</p>
+                    <p class="edul">51.4%</p>
+                </div>
+                <div class="eduln2">
+                    <p class="edul2">Jesus & Mary School & College, Balrampur -ICSE Board</p>
+                    <p class="edul2">2016</p>
+                </div>
+            </div>
+        </div>
+        <!--courseworks-------------------------------------------------------------------------------------------------------------------------------------------->
+
+    </section>
+    <section class="coursework">
+        <p class="educationtext">Courseworks</p>
+        <ul class="courseholder">
+            <li class="ctit">Full Stack Web Development -Udemy</li>
+            <li class="ctit">Python Developer Essentials -Udemy</li>
+            <li class="ctit">Operating Systems</li>
+            <li class="ctit">Fuzzy Logics</li>
+            <li class="ctit">Advance Computer Organization </li>
+            <li class="ctit">DBMS</li>
+            <li class="ctit">Genetic Algorithm</li>
+            <li class="ctit">Computer Networking</li>
+            <li class="ctit">Microprocessors and interfaces</li>
+            <li class="ctit">Object oriented programming</li>
         </ul>
-    </div>
-    <hr id="breaker">
-    <div class="exp">
-        <div class="exhead"><p id="extitle">NullClasses</p> <p id="exduration">Sept 2023 - Oct2023</p></div>
-        <p id="exdesignation" >Android Developer Intern</p>
-        <ul id="exdescription">
-            <li>Contributed to the creation of a messenger app which is similar to Whatsapp.</li>
-            <li>Work alongside my teammates to upgrade messaging features.</li>  
-            <li>Focused on user interface design .</li>
-        </ul>
-    </div>
-</section>
-<!--Education-------------------------------------------------------------------------------------------------------------------------------------------->
+    </section>
+    <!--Contact-------------------------------------------------------------------------------------------------------------------------------------------->
 
-<section class="education" id="four">
-    <div class="educationtext">Education</div>
-    <div class="eduholder">
-
-        <div class="edu">
-            <div class="eduln1">
-                <p class="edul">Bachelor of Technology -Computer Science and Engineering</p>
-                <p class="edul">83.4</p>
-            </div>
-            <div class="eduln2">
-                <p class="edul2">Babu Banarasi Das University, Lucknow</p>
-                <p class="edul2">2020-2024</p>
-            </div>
-        </div>
-
-        <div class="edu">
-            <div class="eduln1">
-                <p class="edul">Intermediate</p>
-                <p class="edul">60%</p>
-            </div>
-            <div class="eduln2">
-                <p class="edul2">UMV College, Gonda- UP Board </p>
-                <p class="edul2">2019</p>
-            </div>
-        </div>
-        <div class="edu">
-            <div class="eduln1">
-                <p class="edul">High School</p>
-                <p class="edul">51.4%</p>
-            </div>
-            <div class="eduln2">
-                <p class="edul2">Jesus & Mary School & College, Balrampur -ICSE Board</p>
-                <p class="edul2">2016</p>
-            </div>
-        </div>
-    </div>
-<!--courseworks-------------------------------------------------------------------------------------------------------------------------------------------->
-
-</section>
-<section class="coursework">
-    <p class="educationtext">Courseworks</p>
-    <ul class="courseholder">
-        <li class="ctit">Full Stack Web Development -Udemy</li>
-        <li class="ctit">Python Developer Essentials -Udemy</li>
-        <li class="ctit">Operating Systems</li>
-        <li class="ctit">Fuzzy Logics</li>
-        <li class="ctit">Advance Computer Organization </li>
-        <li class="ctit">DBMS</li>
-        <li class="ctit">Genetic Algorithm</li>
-        <li class="ctit">Computer Networking</li>
-        <li class="ctit">Microprocessors and interfaces</li>
-        <li class="ctit">Object oriented programming</li>
-    </ul>
-</section>
-<!--Contact-------------------------------------------------------------------------------------------------------------------------------------------->
-
-<section class="contactme" id="five">
-    <div class="col1">
-        <p class="cus">Contact Us</p>
-        <p class="ct">Let's make something new, different and more meaningful or make thing more visual or conceptual?</p>
+    <section class="contactme" id="five">
+        <div class="col1">
+            <p class="cus">Contact Us</p>
+            <p class="ct">Let's make something new, different and more meaningful or make thing more visual or
+                conceptual?</p>
             <div class="cont">
                 <img height="30px" class="cimg" src="assets/call.png" alt="">
                 <div class="ctexthold">
@@ -219,26 +285,27 @@
                 </div>
             </div>
             <div class="cont">
-                <img  height="40px" src="assets/add.png" alt="">
+                <img height="40px" src="assets/add.png" alt="">
                 <div class="ctexthold">
                     <p class="ctext">Address</p>
                     <p class="ccont">Lucknow-UP</p>
                 </div>
             </div>
-    </div>
-    <div class="col2">
-        <p class="cus">Drop a line</p>
-        <div class="feed">
-            <input placeholder="Name" name="" id=""></textarea>
-            <input placeholder="Email" name="" id=""></textarea>
-            <input placeholder="Phone" name="" id=""></textarea>
-            <textarea placeholder="Message" name="" id=""></textarea>
         </div>
-        <button class="sub">Submit</button>
-        
-    </div>
-</section>
+        <div class="col2">
+            <p class="cus">Drop a line</p>
+            <div class="feed">
+                <input placeholder="Name" name="" id=""></textarea>
+                <input placeholder="Email" name="" id=""></textarea>
+                <input placeholder="Phone" name="" id=""></textarea>
+                <textarea placeholder="Message" name="" id=""></textarea>
+            </div>
+            <button class="sub">Submit</button>
 
-<script src="script.js"></script>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
