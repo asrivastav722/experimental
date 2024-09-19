@@ -1,5 +1,5 @@
 :root {
-    --bg: rgb(27, 26, 26);
+    --bg: rgb(243, 237, 237);
     --fg: rgb(44, 44, 44);
 }
 html {
@@ -724,6 +724,22 @@ textarea {
 
 
 
+#dark{
+    height:70px;
+    width:70px;
+    border-radius:100%;
+    border:none;
+    background-color: var(--fg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+    position:fixed;
+    bottom:5vh;
+    right:5vw;
+    transition: all 0.2s;
+}
+#dark:hover{
+    background-color: red;
+    cursor: pointer;
+}
 
 
 
