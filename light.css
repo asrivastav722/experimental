@@ -1,6 +1,8 @@
 :root {
     --bg: rgb(243, 237, 237);
-    --fg: rgb(44, 44, 44);
+    --fg: rgb(255, 255, 255);
+    --bl:black;
+    --wh: white;    
 }
 html {
     scroll-behavior: smooth;
@@ -9,7 +11,7 @@ html {
     padding: 0px;
     margin: 0px;
     font-family: "Roboto", sans-serif;
-    color: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
 }
 
 /* Header section ----------------------------------------------------------------------------------------*/
@@ -44,7 +46,6 @@ header {
     padding-top: 15px;
     text-decoration: dashed;
     width: 80px;
-    color: aliceblue;
     text-align: center;
     transition: color 0.5s;
     font-family: "Montserrat";
@@ -54,7 +55,7 @@ header {
 }
 
 .btn:hover {
-    color: rgba(240, 248, 255, 0.651);
+    color: rgba(0, 0, 0, 0.329);
 }
 
 .btn-adv {
@@ -108,7 +109,7 @@ header {
     text-decoration: none;
     width: 300px;
     height: 40px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     transition: color 0.5s;
     font-family: "Montserrat";
     text-wrap: nowrap;
@@ -141,6 +142,10 @@ header {
 
 .menu {
     display: none;
+    fill:black;
+}
+.close{
+    fill:black;
 }
 
 /* About Card---------------------------------------------------------------------- */
@@ -181,20 +186,19 @@ header {
     font-size: 35pt;
     font-weight: 900;
     font-family: 'Times New Roman', Times, serif;
-    color: rgba(255, 255, 255);
+    color: 
 }
 
 .sde {
     font-size: 12pt;
     font-family: "Montserrat";
-    color: rgba(255, 255, 255);
     padding-bottom: 3vh;
 }
 
 .intro {
     font-size: 9pt;
     line-height: 4vh;
-    color: rgba(255, 255, 255);
+    
 }
 
 .image {
@@ -205,7 +209,7 @@ header {
 
 .profile {
     border-radius: 100%;
-    box-shadow: 0px 0px 20px rgba(243, 219, 1, 0.308);
+    box-shadow: 0px 0px 20px rgb(243, 219, 1);
     height: 40vh;
 }
 
@@ -253,6 +257,7 @@ header {
 .abs {
     font-family: "Montserrat";
     height: 150px;
+    color:red;
     width: 180px;
     display: flex;
     flex-direction: column;
@@ -268,11 +273,12 @@ header {
     font-family: "Montserrat";
     font-size: 40pt;
     font-weight: 800;
+    color:red;
 }
 
 .abs:hover {
     cursor: pointer;
-    color: aqua;
+    
     border-color: rgba(165, 12, 12);
     border-style: groove;
 }
@@ -319,7 +325,7 @@ header {
     align-items: center;
     transition: background-color 0.2s;
     gap: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.137);
 }
 
 .skill:hover {
@@ -370,6 +376,7 @@ header {
     font-family: "montserrat";
     background-color: brown;
     border-radius: 5px;
+    color:white;
 }
 
 #portpers:hover {
@@ -382,6 +389,7 @@ header {
     padding: 10px;
     font-family: "montserrat";
     border-radius: 5px;
+    
     background-color: var(--bg);
 }
 
@@ -503,7 +511,7 @@ header {
     border-color: var(--fg);
 }
 
-/*Skills Section----------------------------------------------------------------------*/
+/*Education Section----------------------------------------------------------------------*/
 .education {
     display: flex;
     flex-direction: column;
@@ -545,7 +553,7 @@ header {
     padding: 20px;
     gap: 10px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.068);
     font-family: "montserrat";
 }
 
@@ -558,7 +566,7 @@ header {
 .edul {
     font-family: "montserrat";
     font-size: 12pt;
-    font-weight: 400;
+    font-weight: 500;
     width: fit-content;
     height: fit-content;
 
@@ -573,7 +581,7 @@ header {
 .edul2 {
     font-family: "montserrat";
     font-size: 10pt;
-    font-weight: 200;
+    font-weight: 400;
     width: fit-content;
     height: fit-content;
 }
@@ -609,10 +617,11 @@ header {
     align-items: center;
     font-family: "montserrat";
     background-color: var(--fg);
+    font-weight:400;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--fg);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.301);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.301);
 }
 
 .ctit:hover {
@@ -621,7 +630,7 @@ header {
 
 }
 
-/*Contact Me*/
+/*Contact Me----------------------------------------------------------------------------------------------------------------------------------*/
 .contactme {
     padding-top:15px;
     display: flex;
@@ -662,7 +671,7 @@ header {
 .ctext {
     font-size: medium;
     font-family: "montserrat";
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .ccont {
@@ -691,7 +700,7 @@ header {
 textarea, input {
     width: 40vw;
     border: 1px solid rgba(255, 255, 255, 0.356);
-    background-color: var(--bg);
+    background-color: var(--fg);
     border-radius: 5px;
     padding: 20px;
     font-family: "montserrat";
@@ -714,6 +723,7 @@ textarea {
     border: none;
     font-family: "montserrat";
     transition: all 0.2s;
+    color:white;
 
 }
 
@@ -725,19 +735,20 @@ textarea {
 
 
 #dark{
-    height:70px;
-    width:70px;
+    height:60px;
+    width:60px;
     border-radius:100%;
     border:none;
-    background-color: var(--fg);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.116);
     position:fixed;
     bottom:5vh;
     right:5vw;
     transition: all 0.2s;
+    fill:rgba(0, 0, 0, 0.5);
+    padding:5px;
 }
-#dark:hover{
-    background-color: red;
+#dark:hover{ 
     cursor: pointer;
 }
 

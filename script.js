@@ -13,13 +13,17 @@ const pro=document.querySelector('#professional');
 
 function showPers(){
     document.querySelector('#portprof').style.backgroundColor="rgb(0,0,0,0)";
+    document.querySelector('#portprof').style.color="var(--bl)";
     document.querySelector('#portpers').style.backgroundColor="brown";
+    document.querySelector('#portpers').style.color="var(--wh)";
     per.style.display="flex";
     pro.style.display="none";
 }
 function showProf(){
     document.querySelector('#portpers').style.backgroundColor="rgb(0,0,0,0)";  
     document.querySelector('#portprof').style.backgroundColor="brown";
+    document.querySelector('#portprof').style.color="var(--wh)";
+    document.querySelector('#portpers').style.color="var(--bl)";
     pro.style.display="flex";
     per.style.display="none";
 }
@@ -34,8 +38,15 @@ function showProf(){
 }*/
 
 function toggledark(){
-    alert(document.querySelector(".styles").href);
-       
+    let currentValue=document.querySelector(".styles").getAttribute("href");
+    let darkPath="dark.css";
+    let lightPath="light.css";
+    if(currentValue === darkPath){
+        document.querySelector(".styles").href=lightPath;
+    }
+    if(currentValue === lightPath){
+        document.querySelector(".styles").href=darkPath;
+    }
     
 }
 
