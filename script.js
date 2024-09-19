@@ -32,17 +32,10 @@ function showProf(){
     document.querySelector(`${id}`).style.backgroundColor="brown";
         
 }*/
-const buttonValue=0
+
 function toggledark(){
-    if(buttonValue===0){
-        document.querySelector(".styles").href='dark.css';
-        buttonValue=1;
-    }
-    if(buttonValue===1){
-        document.querySelector(".styles").href='dark.css';
-        buttonValue=0;
-    }
-  
+    alert(document.querySelector(".styles").href);
+       
     
 }
 
