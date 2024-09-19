@@ -752,6 +752,7 @@ textarea {
 
 
 @media screen and (max-device-width: 846px){
+
     
 /* Header section ----------------------------------------------------------------------------------------*/
 .menu{
@@ -823,12 +824,12 @@ textarea {
         }
 /*Portfolio Section----------------------------------------------------------------------*/
 .pro{
-    width:80vw;
-    height:180px;
+    width:325px;
+    height:175px;
 }
     .provid{
-        width:80vw;
-        height:180px;
+        width:325px;
+        height:175px;
     }
 /*Experience Section----------------------------------------------------------------------*/
 .exp{
