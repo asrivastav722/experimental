@@ -2,587 +2,218 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Akash Raj — Full Stack Developer</title>
-  <meta name="description" content="Akash Raj — Full Stack Developer. Full stack developer portfolio showcasing projects, skills, experience and contact." />
-  <!-- Fonts (kept same family choices) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" >
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* -------------------------
-       Variables / Theme
-       -------------------------*/
-    :root{
-      --bg: #ffffff;
-      --panel: #fbfbfb;
-      --muted: #5b5b5b;
-      --text: #111827;
-      --accent: #b22222; /* keep red accent */
-      --accent-2: rgba(178,34,34,0.12);
-      --glass: rgba(255,255,255,0.7);
-      --card-shadow: 0 8px 30px rgba(15,23,42,0.06);
-      --radius: 12px;
-      --gap: 20px;
-      --max-width: 1100px;
-      --transition: 260ms cubic-bezier(.2,.9,.2,1);
-    }
-    [data-theme="dark"]{
-      --bg: #0b0f13;
-      --panel: #0f1720;
-      --muted: #9aa3ad;
-      --text: #e6eef6;
-      --accent: #ff6b6b;
-      --accent-2: rgba(255,107,107,0.08);
-      --glass: rgba(255,255,255,0.03);
-      --card-shadow: 0 10px 30px rgba(2,6,23,0.6);
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akash Raj • Full Stack Developer</title>
 
-    /* -------------------------
-       Base
-       -------------------------*/
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: "Roboto", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,var(--bg),var(--panel));
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+  <link rel="stylesheet" href="styles.css">
 
-    /* -------------------------
-       Header / Nav
-       -------------------------*/
-    header.topbar{
-      position:sticky;top:0;z-index:60;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.25));
-      border-bottom:1px solid rgba(0,0,0,0.04);
-      transition:background var(--transition);
-    }
-    [data-theme="dark"] header.topbar{
-      background: linear-gradient(180deg, rgba(10,12,14,0.7), rgba(10,12,14,0.45));
-      border-bottom:1px solid rgba(255,255,255,0.03);
-    }
-    .topbar .container{display:flex;align-items:center;gap:var(--gap);height:78px}
-    .brand{
-      display:flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;
-      letter-spacing:0.2px;
-    }
-    .brand img{height:46px;width:46px;border-radius:10px;object-fit:cover;box-shadow:var(--card-shadow)}
-    nav.primary{margin-left:auto;display:flex;gap:12px;align-items:center}
-    nav.primary a.navlink{
-      padding:8px 12px;border-radius:8px;font-weight:600;color:var(--muted);
-      transition:all var(--transition);
-    }
-    nav.primary a.navlink:hover{color:var(--text);background:var(--accent-2)}
-    .cta-download{
-      background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;font-weight:700;
-      box-shadow: 0 6px 16px rgba(178,34,34,0.14);
-    }
-    .icon-btn{background:transparent;border:none;padding:8px;border-radius:8px;cursor:pointer}
-    .menu-toggle{display:none;font-size:20px}
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
-    /* -------------------------
-       Hero / About card
-       -------------------------*/
-    .hero{
-      padding:48px 0 12px;
-      background: linear-gradient(180deg, transparent, var(--panel));
-    }
-    .about-grid{
-      display:grid;grid-template-columns: minmax(0,1fr) 340px;gap:32px;align-items:center;
-      align-content:center;padding:32px 0;
-    }
-    .hero-left h1{font-family: "Montserrat", sans-serif;font-size:clamp(26px,3.6vw,44px);margin:0 0 8px}
-    .hero-left .role{font-weight:600;color:var(--muted);margin-bottom:14px}
-    .intro{
-      font-size:15px;color:var(--muted);max-width:62ch;margin-bottom:18px
-    }
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn-primary{
-      background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;border:none;cursor:pointer;
-      box-shadow: 0 8px 26px rgba(178,34,34,0.12);transition:transform var(--transition), box-shadow var(--transition);
-    }
-    .btn-primary:hover{transform:translateY(-3px)}
-    .btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;color:var(--muted)}
-    [data-theme="dark"] .btn-ghost{border:1px solid rgba(255,255,255,0.04)}
-    .profile-card{
-      background: linear-gradient(180deg,var(--glass), transparent);
-      border-radius:var(--radius); padding:18px; text-align:center; box-shadow:var(--card-shadow)
-    }
-    .profile-card .profile{width:170px;height:170px;border-radius:50%;object-fit:cover;margin:0 auto 12px;box-shadow:0 8px 26px rgba(0,0,0,0.12)}
-    .socials{display:flex;gap:10px;justify-content:center;margin-top:8px}
-    .socials a{opacity:0.9;transition:transform var(--transition)}
-    .socials a:hover{transform:translateY(-4px)}
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    /* -------------------------
-       Stats / Abstract
-       -------------------------*/
-    .stats{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:6px}
-    .stat{min-width:130px;background:var(--panel);padding:16px;border-radius:10px;text-align:center;box-shadow:var(--card-shadow)}
-    .stat .big{font-weight:900;font-size:22px;color:var(--accent)}
-    .stat small{display:block;color:var(--muted);margin-top:6px}
-
-    /* -------------------------
-       Skills
-       -------------------------*/
-    .section{padding:36px 0}
-    .section h2{font-family:Montserrat;margin-bottom:12px;color:var(--accent)}
-    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px}
-    .skill-pill{background:var(--panel);padding:16px;border-radius:10px;text-align:center;box-shadow:var(--card-shadow);font-weight:600;color:var(--muted)}
-    .skill-pill img{height:48px;margin-bottom:8px}
-
-    /* -------------------------
-       Portfolio (preserve images & links)
-       -------------------------*/
-    .portfolio-top{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
-    .tab{padding:8px 14px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);cursor:pointer;background:transparent;font-weight:700}
-    .tab.active{background:var(--accent);color:#fff;border-color:transparent;box-shadow: 0 8px 26px rgba(178,34,34,0.12)}
-    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;align-items:start}
-    .project-card{background:var(--panel);border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);transition:transform var(--transition)}
-    .project-card:hover{transform:translateY(-6px)}
-    .project-card img{width:100%;height:160px;object-fit:cover;display:block}
-    .project-card .pbody{padding:12px}
-    .project-card h3{margin:0 0 8px;font-size:16px}
-    .project-card p{margin:0;color:var(--muted);font-size:14px}
-
-    /* -------------------------
-       Experience / Education / Coursework
-       -------------------------*/
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .card{background:var(--panel);padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
-    .timeline .job{margin-bottom:14px}
-    .job h4{margin:0 0 6px}
-    .job p.meta{margin:0;font-weight:600;color:var(--muted);font-size:14px}
-    .job ul{margin-top:8px;padding-left:18px;color:var(--muted)}
-
-    /* -------------------------
-       Contact
-       -------------------------*/
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .contact-info .row{display:flex;gap:12px;align-items:center;padding:8px 0}
-    .contact-form input, .contact-form textarea{
-      width:100%;padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent;color:var(--text);
-      resize:vertical;font-family:inherit;margin-bottom:8px;
-    }
-    [data-theme="dark"] .contact-form input, [data-theme="dark"] .contact-form textarea{border:1px solid rgba(255,255,255,0.04)}
-    .contact-form button{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;border:none;cursor:pointer}
-
-    /* -------------------------
-       Footer
-       -------------------------*/
-    footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px}
-
-    /* -------------------------
-       Responsive
-       -------------------------*/
-    @media (max-width:980px){
-      .about-grid{grid-template-columns:1fr 300px}
-      .two-col{grid-template-columns:1fr}
-      .contact-grid{grid-template-columns:1fr}
-    }
-    @media (max-width:720px){
-      nav.primary{display:none}
-      .menu-toggle{display:inline-flex}
-      .about-grid{grid-template-columns:1fr;gap:18px}
-      .profile-card{order:-1}
-      .hero{padding-top:28px}
-      header.topbar .container{height:68px}
-    }
-
-    /* Sidebar (mobile overlay) */
-    .mobile-sidebar{
-      position:fixed;right:-100%;top:0;height:100vh;width:320px;max-width:100%;
-      background:var(--panel);box-shadow:0 20px 60px rgba(0,0,0,0.2);padding:24px;transition: right var(--transition);
-      z-index:120;
-    }
-    .mobile-sidebar.open{right:0}
-    .mobile-sidebar .close{margin-left:auto;margin-bottom:8px;display:inline-flex}
-
-    /* small polish */
-    .muted{color:var(--muted)}
-  </style>
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
 </head>
-<body>
+<body class="dark">
 
-  <!-- Topbar -->
-  <header class="topbar" role="banner">
-    <div class="container">
-      <div class="brand" aria-label="Akash Raj brand">
-        <img src="assets/pngegg.png" alt="Akash logo">
-        <div>
-          <div style="font-size:13px">Akash Raj</div>
-          <div style="font-size:11px;color:var(--muted)">Full Stack Developer</div>
-        </div>
-      </div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand">Akash Raj</a>
 
-      <nav class="primary" role="navigation" aria-label="Primary">
-        <a class="navlink" href="#one">Portfolio</a>
-        <a class="navlink" href="#two">Skillsets</a>
-        <a class="navlink" href="#three">Experience</a>
-        <a class="navlink" href="#four">Education</a>
-        <a class="navlink" href="#five">Contact me</a>
-        <a class="cta-download" href="https://drive.google.com/uc?export=download&id=1GuiA9QlHx8tx8aznOB2jKI_oexf6-Jcl" target="_blank" rel="noopener">Download CV</a>
-        <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle theme">🌓</button>
-      </nav>
-
-      <button id="openMenu" class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-  </header>
-
-  <!-- Mobile Sidebar -->
-  <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
-    <div>
-      <button id="closeMenu" class="close icon-btn" aria-label="Close menu">✕</button>
-    </div>
-    <nav style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
-      <a href="#one" class="navlink" onclick="hideSidebar()">Portfolio</a>
-      <a href="#two" class="navlink" onclick="hideSidebar()">Skillsets</a>
-      <a href="#three" class="navlink" onclick="hideSidebar()">Experience</a>
-      <a href="#four" class="navlink" onclick="hideSidebar()">Education</a>
-      <a href="#five" class="navlink" onclick="hideSidebar()">Contact me</a>
-      <a class="cta-download" href="https://drive.google.com/uc?export=download&id=1GuiA9QlHx8tx8aznOB2jKI_oexf6-Jcl" target="_blank" rel="noopener">Download CV</a>
+    <nav class="nav" id="nav">
+      <a href="#hero">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </aside>
 
-  <!-- HERO / ABOUT -->
-  <main>
-    <section class="hero container" aria-labelledby="hero-heading">
-      <div class="about-grid">
-        <div class="hero-left">
-          <h1 id="hero-heading">Welcome! I'm <span style="color:var(--accent);font-weight:900">Akash Raj</span></h1>
-          <div class="role">Full Stack Developer</div>
-          <p class="intro">
-            Innovative, task-driven professional with 12 months of experience in web and application development across diverse areas. Proficient in developing databases, creating user interfaces, writing and testing code, troubleshooting issues, and implementing new features based on user feedback.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn-primary" href="#five">Hire me</a>
-            <a class="btn-ghost" href="https://github.com/asrivastav722" target="_blank" rel="noopener">View GitHub</a>
-            <a class="btn-ghost" href="https://www.linkedin.com/in/akash-raj-90a2a7320/" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-
-          <!-- Stats -->
-          <div class="stats" style="margin-top:18px">
-            <div class="stat"><div class="big">12+</div><small>Months Experience</small></div>
-            <div class="stat"><div class="big">20+</div><small>Projects</small></div>
-          </div>
-        </div>
-
-        <!-- Profile card -->
-        <aside class="profile-card" aria-label="Profile card">
-          <img class="profile" src="assets/profile.jpg" alt="Akash Raj profile picture">
-          <div style="font-weight:800">Akash Raj</div>
-          <div class="muted" style="font-size:13px;margin-bottom:10px">Full Stack Developer • Full Stack</div>
-
-          <div class="socials" aria-label="Social links">
-            <a href="https://www.facebook.com/lamborghni.aventador/" target="_blank" rel="noopener" title="Facebook"><img src="assets/fb.png" alt="Facebook" style="height:22px"></a>
-            <a href="https://www.linkedin.com/in/akash-raj-90a2a7320/" target="_blank" rel="noopener" title="LinkedIn"><img src="assets/ln.png" alt="LinkedIn" style="height:22px"></a>
-            <a href="https://github.com/asrivastav722" target="_blank" rel="noopener" title="GitHub"><img src="assets/gh.png" alt="GitHub" style="height:22px"></a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="two" class="section container">
-      <h2>Skillsets</h2>
-      <div class="skills-grid" aria-hidden="false">
-        <!-- keep your original skill list order -->
-        <div class="skill-pill"><img src="assets/html.png" alt="" style="height:36px;margin:0 auto 8px">HTML</div>
-        <div class="skill-pill"><img src="assets/css.png" alt="" style="height:36px;margin:0 auto 8px">CSS</div>
-        <div class="skill-pill"><img src="assets/js.png" alt="" style="height:36px;margin:0 auto 8px">JavaScript</div>
-        <div class="skill-pill"><img src="assets/git.png" alt="" style="height:36px;margin:0 auto 8px">Git / GitHub</div>
-        <div class="skill-pill"><img src="assets/node-js.svg" alt="" style="height:36px;margin:0 auto 8px">Node.JS</div>
-        <div class="skill-pill"><img src="assets/ex.png" alt="" style="height:36px;margin:0 auto 8px">Express.js</div>
-        <div class="skill-pill"><img src="assets/react-2.svg" alt="" style="height:36px;margin:0 auto 8px">React.JS</div>
-        <div class="skill-pill"><img src="assets/dsa.png" alt="" style="height:36px;margin:0 auto 8px">DSA</div>
-        <div class="skill-pill"><img src="assets/pogs.png" alt="" style="height:36px;margin:0 auto 8px">PostgreSQL</div>
-        <div class="skill-pill"><img src="assets/py.png" alt="" style="height:36px;margin:0 auto 8px">Python</div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO (complete set of original projects preserved) -->
-    <section id="one" class="section container" aria-labelledby="portfolio-heading">
-      <h2 id="portfolio-heading">Portfolio</h2>
-
-      <div class="portfolio-top">
-        <button id="portpers" class="tab active" type="button">Personal</button>
-        <button id="portprof" class="tab" type="button">Professional</button>
-      </div>
-
-      <!-- Personal Projects (original links kept) -->
-      <div id="personal" class="portfolio-grid" aria-hidden="false" style="margin-bottom:18px">
-        <a class="project-card" href="https://github.com/asrivastav722/Blog-page" target="_blank" rel="noopener">
-          <img src="assets/blog.JPG" alt="Blog project screenshot">
-          <div class="pbody">
-            <h3>Blog Page</h3>
-            <p>Blog page project — HTML/CSS/JS. (repo: Blog-page)</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/asrivastav722/Personal-Site" target="_blank" rel="noopener">
-          <img src="assets/personal.JPG" alt="Personal site screenshot">
-          <div class="pbody">
-            <h3>Personal Site</h3>
-            <p>Personal website project showcasing portfolio & profile.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/asrivastav722/Band-Name-Generator" target="_blank" rel="noopener">
-          <img src="assets/band.JPG" alt="Band Name Generator screenshot">
-          <div class="pbody">
-            <h3>Band Name Generator</h3>
-            <p>Fun JS project — random band name generator.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Professional Projects -->
-      <div id="professional" class="portfolio-grid" style="display:none;margin-bottom:18px">
-        <a class="project-card" href="https://asrivastav722.github.io/The-Dicee-Game/" target="_blank" rel="noopener">
-          <img src="assets/dice.JPG" alt="Dice game screenshot">
-          <div class="pbody">
-            <h3>Dice Game</h3>
-            <p>Interactive dice game built for practice and UI interaction.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://asrivastav722.github.io/Drum-Kit/" target="_blank" rel="noopener">
-          <img src="assets/drum.JPG" alt="Drum kit screenshot">
-          <div class="pbody">
-            <h3>Drum Kit</h3>
-            <p>Audio/keyboard interactive drum kit built with vanilla JS.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://asrivastav722.github.io/Simon-Game/" target="_blank" rel="noopener">
-          <img src="assets/simon.JPG" alt="Simon game screenshot">
-          <div class="pbody">
-            <h3>Simon Game</h3>
-            <p>Memory based Simon game built with JS and animations.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE (keeps your original two roles and descriptions) -->
-    <section id="three" class="section container">
-      <h2>Experience</h2>
-
-      <div class="timeline" style="margin-top:12px">
-        <div class="job card">
-          <div class="exhead" style="display:flex;justify-content:space-between;align-items:center">
-            <h4 id="extitle">CodeSoft</h4>
-            <div class="muted" id="exduration">Aug 2023 - Sept 2023</div>
-          </div>
-          <p class="meta" id="exdesignation">Web Developer Intern</p>
-          <ul id="exdescription">
-            <li>Collaborated on Frontend Development projects.</li>
-            <li>Gained hands-on experience in front-end development and problem-solving during internship.</li>
-            <li>Contributed to the development of multiple eCommerce websites, optimizing them with HTML, CSS, JavaScript & Bootstrap.</li>
-          </ul>
-        </div>
-
-        <div style="height:18px"></div>
-
-        <div class="job card">
-          <div class="exhead" style="display:flex;justify-content:space-between;align-items:center">
-            <h4 id="extitle">NullClasses</h4>
-            <div class="muted" id="exduration">Sept 2023 - Oct 2023</div>
-          </div>
-          <p class="meta" id="exdesignation">Android Developer Intern</p>
-          <ul id="exdescription">
-            <li>Contributed to the creation of a messenger app similar to WhatsApp.</li>
-            <li>Worked alongside teammates to upgrade messaging features.</li>
-            <li>Focused on user interface design and implementation.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="four" class="section container">
-      <h2>Education</h2>
-      <div class="eduholder" style="margin-top:12px;display:grid;gap:12px">
-        <div class="card">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:700">Bachelor of Technology — Computer Science & Engineering</div>
-              <div class="muted">Babu Banarasi Das University, Lucknow</div>
-            </div>
-            <div class="muted" style="text-align:right">83% • 2020 - 2024</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:700">Intermediate</div>
-              <div class="muted">UMV College, Gonda — UP Board</div>
-            </div>
-            <div class="muted">60% • 2019</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:700">High School</div>
-              <div class="muted">Jesus & Mary School & College, Balrampur — ICSE Board</div>
-            </div>
-            <div class="muted">51.4% • 2016</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Courseworks -->
-      <div style="margin-top:18px">
-        <h3 style="margin-bottom:8px">Courseworks</h3>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <div class="skill-pill">Full Stack Web Development - Udemy</div>
-          <div class="skill-pill">Python Developer Essentials - Udemy</div>
-          <div class="skill-pill">Data Structures & Algorithms</div>
-          <div class="skill-pill">Operating Systems</div>
-          <div class="skill-pill">Fuzzy Logics</div>
-          <div class="skill-pill">Advanced Computer Organization</div>
-          <div class="skill-pill">DBMS</div>
-          <div class="skill-pill">Genetic Algorithm</div>
-          <div class="skill-pill">Computer Networking</div>
-          <div class="skill-pill">Microprocessors & Interfaces</div>
-          <div class="skill-pill">Object Oriented Programming</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="five" class="section container">
-      <h2>Contact me</h2>
-      <div class="contact-grid" style="margin-top:12px">
-        <div class="contact-info card">
-          <p class="cus" style="font-weight:700">Contact</p>
-          <p class="ct muted">Let's make something new, different and more meaningful — or make things more visual and conceptual.</p>
-
-          <div class="row" style="margin-top:12px">
-            <img src="assets/call.png" alt="" style="height:26px">
-            <div>
-              <div style="font-weight:700">Call me</div>
-              <div class="muted">+91 -8081111867</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <img src="assets/mail.png" alt="" style="height:26px">
-            <div>
-              <div style="font-weight:700">Email</div>
-              <div class="muted">sasgriggs329@gmail.com</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <img src="assets/add.png" alt="" style="height:28px">
-            <div>
-              <div style="font-weight:700">Address</div>
-              <div class="muted">Lucknow - UP</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form card">
-          <p style="font-weight:700">Drop a line</p>
-          <form class="feed" action="https://api.web3forms.com/submit" method="POST" aria-label="Contact form">
-            <input type="hidden" name="access_key" value="9b882dfd-33c2-4bf8-8051-35846a199346">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone" id="phone">
-            <textarea name="message" placeholder="Message" required rows="6"></textarea>
-            <input type="hidden" name="redirect" value="https://web3forms.com/success">
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <small>© <span id="year"></span> Akash Raj. Built with care.</small>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn"><i class="ri-sun-line"></i></button>
+      <button id="menuToggle" class="icon-btn mobile-only"><i class="ri-menu-line"></i></button>
     </div>
-  </footer>
+  </div>
+</header>
 
-  <!-- Scripts (kept and modernized: sidebar, portfolio tabs, theme toggle) -->
-  <script>
-    // initial small boot
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- Floating shapes -->
+<div class="shape s1"></div>
+<div class="shape s2"></div>
+<div class="shape s3"></div>
 
-    // MOBILE SIDEBAR
-    const mobileSidebar = document.getElementById('mobileSidebar');
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="container hero-grid">
 
-    function showSidebar(){
-      mobileSidebar.classList.add('open');
-      mobileSidebar.setAttribute('aria-hidden', 'false');
-    }
-    function hideSidebar(){
-      mobileSidebar.classList.remove('open');
-      mobileSidebar.setAttribute('aria-hidden', 'true');
-    }
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Hi, I'm <span class="gradient">Akash Raj</span></h1>
 
-    openMenu && openMenu.addEventListener('click', showSidebar);
-    closeMenu && closeMenu.addEventListener('click', hideSidebar);
+      <p class="hero-sub">
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </p>
 
-    // Portfolio tabs
-    const per = document.getElementById('personal');
-    const pro = document.getElementById('professional');
-    const btnPers = document.getElementById('portpers');
-    const btnProf = document.getElementById('portprof');
+      <p class="hero-desc">
+        I build modern, scalable & beautiful web experiences using React, Node.js, and optimized system design.
+      </p>
 
-    function showPers(){
-      btnPers.classList.add('active'); btnProf.classList.remove('active');
-      per.style.display = 'grid'; pro.style.display = 'none';
-    }
-    function showProf(){
-      btnProf.classList.add('active'); btnPers.classList.remove('active');
-      pro.style.display = 'grid'; per.style.display = 'none';
-    }
-    btnPers && btnPers.addEventListener('click', showPers);
-    btnProf && btnProf.addEventListener('click', showProf);
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <button id="downloadCV" class="btn outline">Download CV</button>
+      </div>
+    </div>
 
-    // Theme toggle using data-theme for smooth transitions (persist in localStorage)
-    const themeToggle = document.getElementById('themeToggle');
-    const storedTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', storedTheme);
+    <div class="hero-image" data-aos="fade-left">
+      <div class="profile-wrapper">
+        <img src="assets/profile.png" class="profile-img" alt="Profile">
+      </div>
 
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      themeToggle.setAttribute('aria-pressed', next === 'dark');
-    });
+      <div class="floating-tag glass">Open to Work</div>
+      <div class="floating-tag glass">Remote</div>
+    </div>
 
-    // Small accessibility: allow Esc to close mobile sidebar
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape') hideSidebar();
-    });
+  </div>
+</section>
 
-    // Simple smooth reveal for project images (progressive polish)
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.project-card').forEach((el, idx) => {
-        el.style.transitionDelay = (idx * 60) + 'ms';
-        el.style.opacity = 1;
-      });
-    });
-  </script>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Skillsets</h2>
+
+    <div class="skills-grid">
+      <div class="skill glass">HTML</div><div class="skill glass">CSS</div>
+      <div class="skill glass">Tailwind</div><div class="skill glass">Bootstrap</div>
+      <div class="skill glass">JavaScript</div><div class="skill glass">React</div>
+      <div class="skill glass">Next.js</div><div class="skill glass">Node.js</div>
+      <div class="skill glass">Express</div><div class="skill glass">MongoDB</div>
+      <div class="skill glass">DSA</div><div class="skill glass">REST APIs</div>
+      <div class="skill glass">Firebase</div><div class="skill glass">Docker</div>
+      <div class="skill glass">CI/CD</div><div class="skill glass">Vercel</div>
+      <div class="skill glass">WebSockets</div><div class="skill glass">OAuth</div>
+      <div class="skill glass">Android Studio</div><div class="skill glass">Postman</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title">Professional Projects</h2>
+
+    <div class="swiper project-swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide project-card glass">
+          <h3>ShowStage ( Social Media Platform )</h3>
+          <p>Full-stack MERN with Auth, CMS, Webview APK, Backend, Deployment.</p>
+          <div class="card-links">
+            <a href="https://www.showstage.in" target="_blank">Demo</a>
+            <a href="https://github.com/showStageDev" target="_blank">Code</a>
+          </div>
+        </div>
+
+        <div class="swiper-slide project-card glass">
+          <h3>Go For Explore ( Tours )</h3>
+          <p>Next.js project with multiple feature pages & Tailwind UI.</p>
+          <div class="card-links">
+            <a href="https://go4explore.com" target="_blank">Demo</a>
+            <a href="https://github.com/asrivastav722" target="_blank">Code</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE / EDUCATION / COURSE WORK -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">Work Experience</h2>
+
+    <details class="accordion" open>
+      <summary>Full Stack Developer — Cyberoze Pvt. Ltd <span>Sept 2024 - Present</span></summary>
+      <div class="content">
+        <ul>
+          <li>Designed multi-layer network system reducing load by 35%.</li>
+          <li>Optimized Node & React pipeline boosting speed by 45%.</li>
+          <li>Mentored team, increasing efficiency 30%.</li>
+          <li>Express backend APIs improved data throughput 25%.</li>
+          <li>Redux middleware improved response time 15%.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary>Android Developer — NullClasses <span>Sept–Oct 2023</span></summary>
+      <div class="content">
+        <ul>
+          <li>Built WhatsApp-like messenger features.</li>
+          <li>Improved UI & messaging system with team.</li>
+        </ul>
+      </div>
+    </details>
+
+    <h2 class="section-title mt">Education</h2>
+
+    <details class="accordion">
+      <summary>B.Tech CSE — BBD University <span>8.9 SGPA</span></summary>
+      <div class="content">2020 - 2024</div>
+    </details>
+
+    <h2 class="section-title mt">Course Work</h2>
+
+    <details class="accordion">
+      <summary>Full Stack Bootcamp <span>Udemy</span></summary>
+      <div class="content">HTML, CSS, JS, React, Node, Express</div>
+    </details>
+
+    <details class="accordion">
+      <summary>Python Essentials <span>Udemy</span></summary>
+      <div class="content">Python Basics</div>
+    </details>
+
+    <details class="accordion">
+      <summary>DSA in Python <span>YouTube</span></summary>
+      <div class="content">Data Structures & Algorithms</div>
+    </details>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-grid">
+      <div class="glass contact-card">
+        <h3>Get in Touch</h3>
+        <p>Email: <a href="mailto:sasgriggs329@gmail.com">sasgriggs329@gmail.com</a></p>
+        <p>Phone: <a href="tel:+918081111867">+91 808 1111 867</a></p>
+      </div>
+
+      <div class="glass contact-card">
+        <h3>Social</h3>
+        <p><a href="https://github.com/asrivastav722">GitHub</a> • <a href="https://linkedin.com/in/akash-raj-90a2a7320">LinkedIn</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <small>@Copyright <span id="year"></span></small>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
