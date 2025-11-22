@@ -86,8 +86,38 @@ body.light {
 
 /* RIGHT (image + tags) */
 .hero-image { display:flex; flex-direction:column; align-items:center; gap:16px; position:relative; }
-.profile-wrapper { width: 320px; height: 320px; border-radius: 100%; padding: 12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); display:grid; place-items:center; box-shadow: 0 18px 40px rgba(2,6,23,0.6); transform-style:preserve-3d; }
-.profile-img { width: 100%; height:100%; object-fit:cover !important; border-radius: 100%; display:block; }
+
+.profile-wrapper {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  padding: 4px;
+  position: relative;
+}
+
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 4px;
+  background: linear-gradient(135deg, #00eaff, #ff00f6);
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
 .floating-tag { position:absolute; right:6px; top:-12px; padding:8px 12px; border-radius:12px; font-weight:600; transform: translateZ(40px); }
 .floating-tag:nth-child(2){ right:auto; left:6px; top:auto; bottom:-12px; }
 
