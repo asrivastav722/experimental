@@ -85,18 +85,24 @@ body.light {
 .meta-list { margin-top:18px; list-style:none; color: rgba(255,255,255,0.6); display:flex; gap:14px; flex-wrap:wrap; font-weight:500; font-size:0.93rem; }
 
 /* RIGHT (image + tags) */
-.hero-image { display:flex; flex-direction:column; align-items:center; gap:16px; position:relative; }
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  perspective: 700px; /* ensures 3D tilt works */
+}
 
-/* Outer glass frame */
 /* --- Outer Glass Container --- */
 .profile-wrapper {
   width: 260px;
-  height: 260px;
   position: relative;
+  height: 260px;
   border-radius: 50%;
+  z-index: -1;
   padding: 12px;
   cursor: pointer;
-
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -108,19 +114,19 @@ body.light {
   /* 3D depth */
   transform-style: preserve-3d;
   transition: transform 0.4s ease;
+  box-sizing: border-box;
 }
 
 /* Hover 3D tilt */
 .profile-wrapper:hover {
-  transform: perspective(700px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+  transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
 }
-
 
 /* --- RGB Neon Ring --- */
 .profile-wrapper::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: -6px; /* slightly more for better glow */
   border-radius: 50%;
   z-index: -1;
 
@@ -144,15 +150,15 @@ body.light {
   100% { transform: rotate(360deg); }
 }
 
-
 /* --- Inner Image Circle --- */
 .profile-image {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: url("/assets/profile.jpg");
+  background-image: url("assets/profile.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   /* Soft inner glow */
   box-shadow:
@@ -161,6 +167,7 @@ body.light {
     0 8px 25px rgba(0, 0, 0, 0.5);
 
   animation: breathing 6s ease-in-out infinite;
+  transition: transform 0.25s ease; /* smooth parallax */
 }
 
 /* Breathing effect */
@@ -170,20 +177,32 @@ body.light {
   100% { transform: scale(1); }
 }
 
-
 /* --- Parallax Hover Follow --- */
 .profile-wrapper:hover .profile-image {
   transform: translateZ(20px);
-  transition: transform 0.25s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Mobile / tablet responsive */
+@media (max-width: 1024px) {
   .profile-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-image {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .profile-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 
 
 
