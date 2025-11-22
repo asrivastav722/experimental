@@ -154,3 +154,26 @@ if(y) y.textContent = new Date().getFullYear();
 document.querySelectorAll('a[target="_blank"]').forEach(a => {
   if(!a.rel.includes('noopener')) a.rel = (a.rel + ' noopener').trim();
 });
+
+const profile = document.querySelector(".profile-wrapper");
+
+profile.addEventListener("mousemove", (e) => {
+  const rect = profile.getBoundingClientRect();
+  const x = e.clientX - rect.left - rect.width / 2;
+  const y = e.clientY - rect.top - rect.height / 2;
+
+  const rotateX = (y / 20) * -1;
+  const rotateY = x / 20;
+
+  profile.style.transform = `
+    perspective(700px)
+    rotateX(${rotateX}deg)
+    rotateY(${rotateY}deg)
+    scale(1.07)
+  `;
+});
+
+profile.addEventListener("mouseleave", () => {
+  profile.style.transform =
+    "perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)";
+});

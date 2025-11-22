@@ -87,33 +87,105 @@ body.light {
 /* RIGHT (image + tags) */
 .hero-image { display:flex; flex-direction:column; align-items:center; gap:16px; position:relative; }
 
+/* Outer glass frame */
+/* --- Outer Glass Container --- */
 .profile-wrapper {
   width: 260px;
   height: 260px;
-  border-radius: 50%;
-  padding: 4px;
   position: relative;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 3D depth */
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
 }
 
+/* Hover 3D tilt */
+.profile-wrapper:hover {
+  transform: perspective(700px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+}
+
+
+/* --- RGB Neon Ring --- */
 .profile-wrapper::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 4px;
-  background: linear-gradient(135deg, #00eaff, #ff00f6);
-  filter: blur(18px);
+  inset: -5px;
+  border-radius: 50%;
   z-index: -1;
+
+  background: conic-gradient(
+      #ff004c,
+      #ffae00,
+      #00ff95,
+      #0099ff,
+      #b300ff,
+      #ff004c
+  );
+
+  animation: rotateGlow 4s linear infinite;
+  filter: blur(22px);
+  opacity: 0.75;
 }
 
-.profile-img {
+/* RGB Rotation */
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* --- Inner Image Circle --- */
+.profile-image {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
+  background-image: url("/assets/profile.jpg");
+  background-size: cover;
+  background-position: center;
+
+  /* Soft inner glow */
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.25),
+    0 8px 25px rgba(0, 0, 0, 0.5);
+
+  animation: breathing 6s ease-in-out infinite;
 }
+
+/* Breathing effect */
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+
+/* --- Parallax Hover Follow --- */
+.profile-wrapper:hover .profile-image {
+  transform: translateZ(20px);
+  transition: transform 0.25s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
 
 
 
